@@ -2,11 +2,12 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase} from "@angular/common";
+import {CalculateHeightComponent} from "./calculate-height/calculate-height.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, NgClass, NgIf, NgForOf, NgSwitchCase, NgSwitch],
+  imports: [RouterOutlet, FormsModule, NgClass, NgIf, NgForOf, NgSwitchCase, NgSwitch, CalculateHeightComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -28,7 +29,10 @@ export class AppComponent implements OnInit{
   hasError: boolean = false;
   errorMessage: string = '';
 
-  isShow = false
+  isShow = false;
+
+
+  h: number = 180;
   public onChange(event: Event): void {
     this.title = (<HTMLInputElement>event.target).value;
   }
@@ -41,5 +45,8 @@ export class AppComponent implements OnInit{
   }
 
 
+  calculateSum(e: number) {
+    alert('your height id '+ e)
+  }
 
 }
