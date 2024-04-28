@@ -3,11 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import {FormsModule} from "@angular/forms";
 import {NgClass, NgForOf, NgIf, NgSwitch, NgSwitchCase} from "@angular/common";
 import {CalculateHeightComponent} from "./calculate-height/calculate-height.component";
+import {ParentComponent} from "./parent/parent.component";
+import {ChildComponent} from "./child/child.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FormsModule, NgClass, NgIf, NgForOf, NgSwitchCase, NgSwitch, CalculateHeightComponent],
+  imports: [RouterOutlet, FormsModule, NgClass, NgIf, NgForOf, NgSwitchCase, NgSwitch, CalculateHeightComponent, ParentComponent, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

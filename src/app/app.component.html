@@ -1,38 +1,38 @@
-<h4>string interpolation :</h4>
-  {{num}}
-<h4>property binding :</h4>
-<button [disabled]=isDisable>Button</button>
+<!--<h4>string interpolation :</h4>-->
+<!--  {{num}}-->
+<!--<h4>property binding :</h4>-->
+<!--<button [disabled]=isDisable>Button</button>-->
 
-<h4>event binding :</h4>
-<input (input)="onChange($event)" />
+<!--<h4>event binding :</h4>-->
+<!--<input (input)="onChange($event)" />-->
 
-<h4>two way binding :</h4>
-<input [(ngModel)]=title   />
+<!--<h4>two way binding :</h4>-->
+<!--<input [(ngModel)]=title   />-->
 
-<div [class]="'red-color'" >Hello world</div>
+<!--<div [class]="'red-color'" >Hello world</div>-->
 
-<h4 [class.error]="errorMessage" >{{errorMessage || 'no error'}}</h4>
+<!--<h4 [class.error]="errorMessage" >{{errorMessage || 'no error'}}</h4>-->
 
-<div [ngClass]="'red-color'" >Hello world</div>
+<!--<div [ngClass]="'red-color'" >Hello world</div>-->
 
-<div *ngIf="isShow; else here" >i am here</div>
+<!--<div *ngIf="isShow; else here" >i am here</div>-->
 
-<ng-template #here >
-  i am not here
-</ng-template>
-
-
-<ul>
-  <li *ngFor="let n of names; let i = index" >{{i+1}}:{{n}}</li>
-</ul>
-
-<div [ngSwitch]="userStatus">
-    <div *ngSwitchCase="1">active</div>
-    <div *ngSwitchCase="2">disable</div>
-    <div *ngSwitchCase="3">hide</div>
-</div>
+<!--<ng-template #here >-->
+<!--  i am not here-->
+<!--</ng-template>-->
 
 
-<app-calculate-height [height]="h" (sum)="calculateSum($event)"  ></app-calculate-height>
+<!--<ul>-->
+<!--  <li *ngFor="let n of names; let i = index" >{{i+1}}:{{n}}</li>-->
+<!--</ul>-->
+
+<!--<div [ngSwitch]="userStatus">-->
+<!--    <div *ngSwitchCase="1">active</div>-->
+<!--    <div *ngSwitchCase="2">disable</div>-->
+<!--    <div *ngSwitchCase="3">hide</div>-->
+<!--</div>-->
 
 
+<!--<app-calculate-height [height]="h" (sum)="calculateSum($event)"  ></app-calculate-height>-->
+
+  <app-parent></app-parent>

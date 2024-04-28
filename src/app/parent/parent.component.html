@@ -1,0 +1,9 @@
+<div class="parent">
+  <div>parent component</div>
+  <div>message : {{message}}</div>
+  <div>message from child : {{messageFromChild}}</div>
+  <app-child #childComponentRef [messageFromParent]="message" (eventMessage)="childMessage($event)" ></app-child>
+  <button (click)="onClickParent()">on Parent</button>
+
+  <p #pTag>input text</p>
+</div>
